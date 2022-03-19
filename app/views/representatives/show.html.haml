@@ -1,0 +1,55 @@
+.row.mt-2
+    .col-12.col-md-6.offset-md-3.col-xl-4.offset-xl-4
+        %h3.text-center Representative Details
+        .card-body
+            .card-text
+                %dl.row
+                    %dt.col-sm-3.text-md-right Name:
+                    %dt.col-sm-9
+                        = @representative.name
+                %dl.row
+                    %dt.col-sm-3.text-md-right Title:
+                    %dt.col-sm-9
+                        = @representative.title
+                %dl.row
+                    %dt.col-sm-3.text-md-right Party:
+                    %dt.col-sm-9
+                        = @representative.party
+                %dl.row
+                    %dt.col-sm-3.text-md-right Address:
+                    %dt.col-sm-9
+                        = @representative.line1
+                %dl.row
+                    %dt.col-sm-3.text-md-right
+                    %dt.col-sm-9
+                        = @representative.line2
+                %dl.row
+                    %dt.col-sm-3.text-md-right
+                    %dt.col-sm-9
+                        = @representative.line3
+                %dl.row
+                    %dt.col-sm-3.text-md-right City:
+                    %dt.col-sm-9
+                        = @representative.city
+                %dl.row
+                    %dt.col-sm-3.text-md-right State:
+                    %dt.col-sm-9
+                        = @representative.state
+                %dl.row
+                    %dt.col-sm-3.text-md-right Zip Code:
+                    %dt.col-sm-9
+                        = @representative.zip
+                %dl.row
+                    %dt.col-sm-3.text-md-right Photo:
+                    %img{ src: @representative.photo_url }
+
+    .col-12.col-md-6.offset-md-3.col-xl-4.offset-xl-4
+        .clearfix
+            .float-right
+                = link_to :back, class: 'mx-1 btn btn-primary' do
+                    %i.fas.fa-caret-left
+                    Back
+
+                = link_to representatives_path, class: 'mx-1 btn btn-info' do
+                    %i.fas.fa-list
+                    All representatives
